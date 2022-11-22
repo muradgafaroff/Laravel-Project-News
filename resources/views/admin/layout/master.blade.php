@@ -146,7 +146,7 @@
                         </a>
                         <ul class="nav nav-treeview" >
                             <li class="nav-item">
-                                <a href="{{route('contact')}}"
+                                <a href="{{route('admin.contact')}}"
                                    class="nav-link {{request()->is('admin/contact') ? 'active' : ""}}">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contact</p>

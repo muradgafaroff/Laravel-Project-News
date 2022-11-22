@@ -61,7 +61,7 @@ Route::prefix('admin')->group(function () {
 
 
 
-    Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+    Route::get('/contact', [PagesController::class, 'contact'])->name('admin.contact');
     Route::get('/contact-edit', [PagesController::class, 'contactEdit'])->name('contact.edit');
     Route::post('/contact/update', [PagesController::class, 'contactUpdate'])->name('contact.update');
 
