@@ -97,6 +97,7 @@ return redirect()->back();
     }
     public function search(Request $req)
     {
+        $newsCount = News::all()->count();
         $category = Category::all();
         $authors = Author::all();
         $news = News::with(['category','author'])
@@ -106,7 +107,7 @@ return redirect()->back();
             ->authorSearch($req->input('author_id'))
             ->paginate(6);
 
-        return view('admin.pages.news', compact('authors','category', 'news'));
+        return view('admin.pages.news', compact('authors','category', 'news','newsCount'));
     }
 
 
